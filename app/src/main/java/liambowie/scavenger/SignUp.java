@@ -102,17 +102,28 @@ public class SignUp extends AppCompatActivity {
         mSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(!mTeamName.getText().toString().isEmpty()) {
+                    String name = mTeamName.getText().toString();
+                    mTeams.push().setValue(name);
 
-                // Add a check to ensure that mTeamName is not empty!
+                    SharedPreferences.Editor preferenceEditor = getSharedPreferences("team", 0).edit();
+                    preferenceEditor.putString("team_name", name).commit();
 
-                String name = mTeamName.getText().toString();
-                mTeams.push().setValue(name);
+                    finish();
+                    startActivity(new Intent(getApplicationContext(), Dashboard.class));
+                }
+                else{
+                    new AlertDialog.Builder(SignUp.this)
+                            .setTitle(R.string.alert_invalidteamname_title)
+                            .setMessage((R.string.alert_invalidteamname_msg))
+                            .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
 
-                SharedPreferences.Editor preferenceEditor = getSharedPreferences("team", 0).edit();
-                preferenceEditor.putString("team_name", name).commit();
-
-                finish();
-                startActivity(new Intent(getApplicationContext(), Dashboard.class));
+                                }
+                            })
+                            .show();
+                }
             }
         });
 

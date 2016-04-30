@@ -9,12 +9,9 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="33d2d1f9-45b8-45fd-a0e7-f6664df58a87" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/Dashboard.java" afterPath="$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/Dashboard.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_dashboard.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_dashboard.xml" />
+    <list default="true" id="33d2d1f9-45b8-45fd-a0e7-f6664df58a87" name="Default" comment="Add UI Components to the Dashboard Activity. (This should have been on a new branch)">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/SignUp.java" afterPath="$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/SignUp.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="scavengr.iws" />
@@ -43,17 +40,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SignUp.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/SignUp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="123" column="43" selection-start-line="123" selection-start-column="43" selection-end-line="123" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="content_dashboard.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="content_dashboard.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_dashboard.xml">
           <provider selected="true" editor-type-id="android-designer">
             <state />
@@ -71,8 +58,8 @@
       <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.5555553">
-              <caret line="12" column="62" selection-start-line="12" selection-start-column="62" selection-end-line="12" selection-end-column="62" />
+            <state vertical-scroll-proportion="-6.9259257">
+              <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -91,10 +78,33 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="SignUp.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/SignUp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.4561718">
+              <caret line="123" column="30" selection-start-line="123" selection-start-column="30" selection-end-line="123" selection-end-column="30" />
+              <folding>
+                <element signature="e#4081#5281#0" expanded="true" />
+                <element signature="e#4790#4826#0" expanded="true" />
+                <element signature="e#4869#4903#0" expanded="true" />
+                <element signature="e#4953#4964#0" expanded="true" />
+                <element signature="e#5280#5281#0" expanded="true" />
+                <element signature="e#5447#6801#0" expanded="true" />
+                <element signature="e#6800#6801#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="GradleLocalSettings">
     <option name="availableProjects">
@@ -1669,8 +1679,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/Dashboard.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/content_dashboard.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/SignUp.java" />
       </list>
     </option>
   </component>
@@ -1997,6 +2008,13 @@
       <option name="number" value="Default" />
       <updated>1461983530200</updated>
     </task>
+    <task id="LOCAL-00001" summary="Add UI Components to the Dashboard Activity. (This should have been on a new branch)">
+      <created>1462015826576</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1462015826576</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2046,6 +2064,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add UI Components to the Dashboard Activity. (This should have been on a new branch)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add UI Components to the Dashboard Activity. (This should have been on a new branch)" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
@@ -2055,23 +2077,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/SignUp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="123" column="43" selection-start-line="123" selection-start-column="43" selection-end-line="123" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.5555553">
-          <caret line="12" column="62" selection-start-line="12" selection-start-column="62" selection-end-line="12" selection-end-column="62" />
-          <folding />
+          <folding>
+            <element signature="e#4081#5281#0" expanded="true" />
+            <element signature="e#4790#4826#0" expanded="true" />
+            <element signature="e#4869#4903#0" expanded="true" />
+            <element signature="e#4953#4964#0" expanded="true" />
+            <element signature="e#5280#5281#0" expanded="true" />
+            <element signature="e#5447#6801#0" expanded="true" />
+            <element signature="e#6800#6801#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2095,6 +2109,30 @@
           <caret line="51" column="40" selection-start-line="51" selection-start-column="40" selection-end-line="51" selection-end-column="40" />
           <folding>
             <element signature="e#1812#1835#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.9259257">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/SignUp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.4561718">
+          <caret line="123" column="30" selection-start-line="123" selection-start-column="30" selection-end-line="123" selection-end-column="30" />
+          <folding>
+            <element signature="e#4081#5281#0" expanded="true" />
+            <element signature="e#4790#4826#0" expanded="true" />
+            <element signature="e#4869#4903#0" expanded="true" />
+            <element signature="e#4953#4964#0" expanded="true" />
+            <element signature="e#5280#5281#0" expanded="true" />
+            <element signature="e#5447#6801#0" expanded="true" />
+            <element signature="e#6800#6801#0" expanded="true" />
           </folding>
         </state>
       </provider>
