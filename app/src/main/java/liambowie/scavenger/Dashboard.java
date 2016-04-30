@@ -9,10 +9,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class Dashboard extends AppCompatActivity {
 
     Button mBack;
+    TextView mTeamName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +23,12 @@ public class Dashboard extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         mBack = (Button)findViewById(R.id.button);
+        mTeamName = (TextView)findViewById(R.id.textView_dashTeamName);
+
+        // Set the team name in the top left corner of the dashboard
+        SharedPreferences preferences = getSharedPreferences("team", 0);
+        String teamName = preferences.getString("team_name", /*Should never appear*/ "Unassigned");
+        mTeamName.setText(teamName);
 
         mBack.setOnClickListener(new View.OnClickListener() {
             @Override

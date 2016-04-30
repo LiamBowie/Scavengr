@@ -10,4 +10,5 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="title_activity_dashboard">Dashboard</string>
+    <string name="dashboard_msg">Complete tasks to gain points</string>
 </resources>
