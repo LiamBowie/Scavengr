@@ -104,7 +104,8 @@ public class SignUp extends AppCompatActivity {
             public void onClick(View v) {
                 if(!mTeamName.getText().toString().isEmpty()) {
                     String name = mTeamName.getText().toString();
-                    mTeams.push().setValue(name);
+                    Team team = new Team(name, 0);
+                    mTeams.push().setValue(team);
 
                     SharedPreferences.Editor preferenceEditor = getSharedPreferences("team", 0).edit();
                     preferenceEditor.putString("team_name", name).commit();
