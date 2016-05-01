@@ -8,6 +8,8 @@ public class Team {
     private String teamName;
     private int score;
 
+    public Team(){}
+
     public Team(String teamName, int score) {
         this.teamName = teamName;
         this.score = score;
