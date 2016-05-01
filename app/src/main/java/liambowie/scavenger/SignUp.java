@@ -99,12 +99,12 @@ public class SignUp extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(!mTeamName.getText().toString().isEmpty()) {
-                    String name = mTeamName.getText().toString();
-                    Team team = new Team(name, 0);
+                    String teamName = mTeamName.getText().toString();
+                    Team team = new Team(teamName, 0);
                     mTeamRef.push().setValue(team);
 
                     SharedPreferences.Editor preferenceEditor = getSharedPreferences("team", 0).edit();
-                    preferenceEditor.putString("team_name", name).commit();
+                    preferenceEditor.putString("team_name", teamName).apply();
 
                     finish();
                     startActivity(new Intent(getApplicationContext(), Dashboard.class));
@@ -129,7 +129,8 @@ public class SignUp extends AppCompatActivity {
         mTeamList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                final String name = mTeamList.getItemAtPosition(position).toString();
+                final Team team = (Team)mTeamList.getItemAtPosition(position);
+                final String name = team.getTeamName();
                 AlertDialog.Builder alert = new AlertDialog.Builder(SignUp.this);
                 alert.setTitle(R.string.alert_confirmteam_title);
                 alert.setMessage(R.string.alert_confirmteam_msg);
