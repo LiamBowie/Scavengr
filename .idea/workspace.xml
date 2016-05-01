@@ -9,21 +9,8 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="33d2d1f9-45b8-45fd-a0e7-f6664df58a87" name="Default" comment="Add UI Components to the Dashboard Activity. (This should have been on a new branch)">
-      <change type="DELETED" beforePath="C:\Users\Liam\Documents\DevelopmentProjects\Android Programming\scavengr\.idea\libraries\appcompat_v7_23_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Liam\Documents\DevelopmentProjects\Android Programming\scavengr\.idea\libraries\design_23_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Liam\Documents\DevelopmentProjects\Android Programming\scavengr\.idea\libraries\firebase_client_android_2_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Liam\Documents\DevelopmentProjects\Android Programming\scavengr\.idea\libraries\firebase_client_jvm_2_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Liam\Documents\DevelopmentProjects\Android Programming\scavengr\.idea\libraries\firebase_ui_0_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Liam\Documents\DevelopmentProjects\Android Programming\scavengr\.idea\libraries\jackson_annotations_2_2_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Liam\Documents\DevelopmentProjects\Android Programming\scavengr\.idea\libraries\jackson_core_2_2_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Liam\Documents\DevelopmentProjects\Android Programming\scavengr\.idea\libraries\jackson_databind_2_2_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Liam\Documents\DevelopmentProjects\Android Programming\scavengr\.idea\libraries\recyclerview_v7_23_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Liam\Documents\DevelopmentProjects\Android Programming\scavengr\.idea\libraries\support_annotations_23_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Liam\Documents\DevelopmentProjects\Android Programming\scavengr\.idea\libraries\support_v4_23_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Liam\Documents\DevelopmentProjects\Android Programming\scavengr\.idea\libraries\tubesock_0_0_11.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/Team.java" afterPath="$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/Team.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
+    <list default="true" id="33d2d1f9-45b8-45fd-a0e7-f6664df58a87" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/SignUp.java" afterPath="$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/SignUp.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="scavengr.iws" />
@@ -85,22 +72,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SignUp.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SignUp.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/SignUp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="88" column="62" selection-start-line="88" selection-start-column="62" selection-end-line="88" selection-end-column="62" />
+            <state vertical-scroll-proportion="0.608229">
+              <caret line="73" column="10" selection-start-line="73" selection-start-column="10" selection-end-line="73" selection-end-column="10" />
               <folding>
-                <element signature="e#2670#2678#0" expanded="true" />
+                <element signature="e#2652#2658#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Team.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Team.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/Team.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3041145">
+            <state vertical-scroll-proportion="0.0">
               <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
               <folding />
             </state>
@@ -1692,8 +1679,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/Dashboard.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/content_dashboard.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/SignUp.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/Team.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/SignUp.java" />
       </list>
     </option>
   </component>
@@ -2069,7 +2056,13 @@
       <option name="project" value="LOCAL" />
       <updated>1462015826576</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added a new parameterless constructor to Team. This is so that it is possible for Firebase to create a new instance of this class.&#10;&#10;For more details:&#10;https://github.com/firebase/FirebaseUI-Android#using-firebaseui-to-populate-a-listview&#10;">
+      <created>1462100860308</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1462100860309</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2121,7 +2114,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add UI Components to the Dashboard Activity. (This should have been on a new branch)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add UI Components to the Dashboard Activity. (This should have been on a new branch)" />
+    <MESSAGE value="Added a new parameterless constructor to Team. This is so that it is possible for Firebase to create a new instance of this class.&#10;&#10;For more details:&#10;https://github.com/firebase/FirebaseUI-Android#using-firebaseui-to-populate-a-listview&#10;" />
+    <MESSAGE value="Updated the FirebaseListAdapter in the SignUp page to accomodate for the new Team.class data structure." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated the FirebaseListAdapter in the SignUp page to accomodate for the new Team.class data structure." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2160,7 +2155,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2670#2678#0" expanded="true" />
+            <element signature="e#2652#2658#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2170,16 +2165,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
           <folding>
-            <element signature="e#2670#2678#0" expanded="true" />
+            <element signature="e#2652#2658#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/Dashboard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2202,21 +2189,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/SignUp.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/Dashboard.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="88" column="62" selection-start-line="88" selection-start-column="62" selection-end-line="88" selection-end-column="62" />
-          <folding>
-            <element signature="e#2670#2678#0" expanded="true" />
-          </folding>
+          <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/Team.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3041145">
+        <state vertical-scroll-proportion="0.0">
           <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/SignUp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.608229">
+          <caret line="73" column="10" selection-start-line="73" selection-start-column="10" selection-end-line="73" selection-end-column="10" />
+          <folding>
+            <element signature="e#2652#2658#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

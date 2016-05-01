@@ -66,16 +66,12 @@ public class SignUp extends AppCompatActivity {
         }
 
         // Firebase List Adapter to populate the list of teams in real time
-        FirebaseListAdapter<String> adapter =
-                new FirebaseListAdapter<String>(this,
-                        String.class,
-                        android.R.layout.simple_list_item_1,
-                        mTeams) {
-                    @Override
-                    protected void populateView(View view, String s, int i) {
-                        ((TextView)view.findViewById(android.R.id.text1)).setText(s);
-                    }
-                };
+        FirebaseListAdapter<Team> adapter = new FirebaseListAdapter<Team>(this, Team.class, android.R.layout.simple_list_item_1, mTeams) {
+            @Override
+            protected void populateView(View view, Team team, int i) {
+                ((TextView)view.findViewById(android.R.id.text1)).setText(team.getTeamName());
+            }
+        };
         mTeamList.setAdapter(adapter);
 
         // Toggle whether to show New Team options or Join Team options
