@@ -7,6 +7,7 @@ public class Team {
 
     private String teamName;
     private int score;
+    private String key;
 
     public Team(){}
 
@@ -34,4 +35,8 @@ public class Team {
     public void add(int points){
         this.score += points;
     }
+
+    public String getKey() { return key; }
+
+    public void setKey(String key) { this.key = key; }
 }

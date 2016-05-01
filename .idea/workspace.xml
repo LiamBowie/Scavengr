@@ -10,7 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33d2d1f9-45b8-45fd-a0e7-f6664df58a87" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_dashboard.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_dashboard.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/Dashboard.java" afterPath="$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/Dashboard.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/SignUp.java" afterPath="$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/SignUp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/Team.java" afterPath="$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/Team.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="scavengr.iws" />
@@ -39,7 +42,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="content_dashboard.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="content_dashboard.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_dashboard.xml">
           <provider selected="true" editor-type-id="android-designer">
             <state />
@@ -55,8 +58,8 @@
       <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+            <state vertical-scroll-proportion="-11.333333">
+              <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -66,21 +69,26 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/SignUp.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="168" column="56" selection-start-line="168" selection-start-column="56" selection-end-line="168" selection-end-column="56" />
+              <caret line="114" column="42" selection-start-line="114" selection-start-column="42" selection-end-line="114" selection-end-column="42" />
               <folding>
-                <element signature="e#2654#2660#0" expanded="true" />
+                <element signature="e#2655#2661#0" expanded="true" />
+                <element signature="e#6072#6102#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Dashboard.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Dashboard.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/Dashboard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="10" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
+            <state vertical-scroll-proportion="1.2772808">
+              <caret line="111" column="76" selection-start-line="111" selection-start-column="76" selection-end-line="111" selection-end-column="76" />
               <folding>
-                <element signature="e#3043#3049#0" expanded="true" />
+                <element signature="e#3570#3576#0" expanded="true" />
+                <element signature="e#4199#5208#0" expanded="true" />
+                <element signature="e#4695#4712#0" expanded="true" />
+                <element signature="e#4944#4963#0" expanded="true" />
+                <element signature="e#5207#5208#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -90,7 +98,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/Team.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+              <caret line="40" column="53" selection-start-line="40" selection-start-column="53" selection-end-line="40" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -1698,12 +1706,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/Task.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/content_dashboard.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/Team.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/Task.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/Dashboard.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/SignUp.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/content_dashboard.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/Dashboard.java" />
       </list>
     </option>
   </component>
@@ -2033,7 +2041,13 @@
       <option name="project" value="LOCAL" />
       <updated>1462109908622</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Changed the medium text to Large">
+      <created>1462110422016</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1462110422016</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2088,7 +2102,8 @@
     <MESSAGE value="Added a new parameterless constructor to Team. This is so that it is possible for Firebase to create a new instance of this class.&#10;&#10;For more details:&#10;https://github.com/firebase/FirebaseUI-Android#using-firebaseui-to-populate-a-listview&#10;" />
     <MESSAGE value="Updated the FirebaseListAdapter in the SignUp page to accomodate for the new Team.class data structure." />
     <MESSAGE value="Sorted the preferences bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sorted the preferences bug" />
+    <MESSAGE value="Changed the medium text to Large" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed the medium text to Large" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2121,7 +2136,11 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#3043#3049#0" expanded="true" />
+            <element signature="e#3570#3576#0" expanded="true" />
+            <element signature="e#4199#5208#0" expanded="true" />
+            <element signature="e#4695#4712#0" expanded="true" />
+            <element signature="e#4944#4963#0" expanded="true" />
+            <element signature="e#5207#5208#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2142,7 +2161,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="68" column="137" selection-start-line="68" selection-start-column="137" selection-end-line="68" selection-end-column="137" />
           <folding>
-            <element signature="e#2654#2660#0" expanded="true" />
+            <element signature="e#2655#2661#0" expanded="true" />
+            <element signature="e#6072#6102#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2179,7 +2199,11 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
           <folding>
-            <element signature="e#3043#3049#0" expanded="true" />
+            <element signature="e#3570#3576#0" expanded="true" />
+            <element signature="e#4199#5208#0" expanded="true" />
+            <element signature="e#4695#4712#0" expanded="true" />
+            <element signature="e#4944#4963#0" expanded="true" />
+            <element signature="e#5207#5208#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2189,7 +2213,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2654#2660#0" expanded="true" />
+            <element signature="e#2655#2661#0" expanded="true" />
+            <element signature="e#6072#6102#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2199,16 +2224,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
           <folding>
-            <element signature="e#2654#2660#0" expanded="true" />
+            <element signature="e#2655#2661#0" expanded="true" />
+            <element signature="e#6072#6102#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2231,34 +2249,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/SignUp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="168" column="56" selection-start-line="168" selection-start-column="56" selection-end-line="168" selection-end-column="56" />
-          <folding>
-            <element signature="e#2654#2660#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/Team.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/Dashboard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="10" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
-          <folding>
-            <element signature="e#3043#3049#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_dashboard.xml">
       <provider selected="true" editor-type-id="android-designer">
         <state />
@@ -2267,6 +2257,47 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="47" column="49" selection-start-line="47" selection-start-column="49" selection-end-line="47" selection-end-column="49" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.333333">
+          <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/SignUp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="114" column="42" selection-start-line="114" selection-start-column="42" selection-end-line="114" selection-end-column="42" />
+          <folding>
+            <element signature="e#2655#2661#0" expanded="true" />
+            <element signature="e#6072#6102#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/Team.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="40" column="53" selection-start-line="40" selection-start-column="53" selection-end-line="40" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/liambowie/scavenger/Dashboard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.2772808">
+          <caret line="111" column="76" selection-start-line="111" selection-start-column="76" selection-end-line="111" selection-end-column="76" />
+          <folding>
+            <element signature="e#3570#3576#0" expanded="true" />
+            <element signature="e#4199#5208#0" expanded="true" />
+            <element signature="e#4695#4712#0" expanded="true" />
+            <element signature="e#4944#4963#0" expanded="true" />
+            <element signature="e#5207#5208#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

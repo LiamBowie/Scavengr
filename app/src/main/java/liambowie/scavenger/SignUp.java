@@ -31,6 +31,7 @@ public class SignUp extends AppCompatActivity {
     ListView mTeamList;
     CheckBox mJoinTeam;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -101,13 +102,17 @@ public class SignUp extends AppCompatActivity {
                 if(!mTeamName.getText().toString().isEmpty()) {
                     String teamName = mTeamName.getText().toString();
                     Team team = new Team(teamName, 0);
-                    mTeamRef.push().setValue(team);
+                    mTeamRef.push();
+                    mTeamRef.setValue(team);
+                    String key = mTeamRef.getKey();
 
                     SharedPreferences.Editor preferenceEditor = getSharedPreferences("team", 0).edit();
                     preferenceEditor.putString("team_name", teamName).apply();
 
+                    Intent intent = new Intent(getApplicationContext(), Dashboard.class);
+                    intent.putExtra("liambowie.scavenger.teamkey", key);
                     finish();
-                    startActivity(new Intent(getApplicationContext(), Dashboard.class));
+                    startActivity(intent);
                 }
                 else{
                     new AlertDialog.Builder(SignUp.this)

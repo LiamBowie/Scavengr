@@ -14,4 +14,7 @@
     <string name="dashboard_msg">Complete tasks to gain points</string>
     <string name="alert_invalidteamname_title">Invalid Team Name</string>
     <string name="alert_invalidteamname_msg">Please enter a valid team name</string>
+    <string name="label_teamname">Team:</string>
+    <string name="complete">Done!</string>
+    <string name="incomplete">Do it later..</string>
 </resources>
