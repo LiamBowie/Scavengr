@@ -24,7 +24,7 @@ public class SignUp extends AppCompatActivity {
 
     // Instance Variable for Sign Up Activity
     final Firebase mRootRef = new Firebase("https://scavengr.firebaseio.com");
-    final Firebase mTeams = mRootRef.child("teams");
+    final Firebase mTeamRef = mRootRef.child("teams");
     TextView mNoTeamsMsg;
     EditText mTeamName;
     Button mSubmit;
@@ -66,7 +66,7 @@ public class SignUp extends AppCompatActivity {
         }
 
         // Firebase List Adapter to populate the list of teams in real time
-        FirebaseListAdapter<Team> adapter = new FirebaseListAdapter<Team>(this, Team.class, android.R.layout.simple_list_item_1, mTeams) {
+        FirebaseListAdapter<Team> adapter = new FirebaseListAdapter<Team>(this, Team.class, android.R.layout.simple_list_item_1, mTeamRef) {
             @Override
             protected void populateView(View view, Team team, int i) {
                 ((TextView)view.findViewById(android.R.id.text1)).setText(team.getTeamName());
@@ -101,7 +101,7 @@ public class SignUp extends AppCompatActivity {
                 if(!mTeamName.getText().toString().isEmpty()) {
                     String name = mTeamName.getText().toString();
                     Team team = new Team(name, 0);
-                    mTeams.push().setValue(team);
+                    mTeamRef.push().setValue(team);
 
                     SharedPreferences.Editor preferenceEditor = getSharedPreferences("team", 0).edit();
                     preferenceEditor.putString("team_name", name).commit();
