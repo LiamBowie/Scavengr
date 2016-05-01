@@ -1,5 +1,5 @@
-# Ignore all . files
-.*
+# .idea files
+.idea/
 
 # Built application files
 *.apk
