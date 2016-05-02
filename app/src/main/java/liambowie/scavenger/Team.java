@@ -6,14 +6,20 @@ package liambowie.scavenger;
 public class Team {
 
     private String teamName;
-    private int score;
     private String key;
+    private int score;
 
     public Team(){}
 
-    public Team(String teamName, int score) {
+    public Team(String teamName) {
         this.teamName = teamName;
-        this.score = score;
+        this.score = 0;
+    }
+
+    public Team(String teamName, String key) {
+        this.teamName = teamName;
+        this.key = key;
+        this.score = 0;
     }
 
     public String getTeamName() {

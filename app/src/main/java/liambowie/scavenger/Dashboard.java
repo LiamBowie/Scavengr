@@ -16,7 +16,11 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.firebase.client.ChildEventListener;
+import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
+import com.firebase.client.FirebaseError;
+import com.firebase.client.ValueEventListener;
 import com.firebase.ui.FirebaseListAdapter;
 
 public class Dashboard extends AppCompatActivity {
@@ -24,11 +28,15 @@ public class Dashboard extends AppCompatActivity {
     // Instance Variables for the Dashboard Class
     final Firebase mRootRef = new Firebase("https://scavengr.firebaseio.com");
     final Firebase mTaskRef = mRootRef.child("tasks");
+
+    // UI
     Button mBack;
     TextView mTeamName;
     ListView mTasks;
     ProgressBar mTeamScoreBar;
-    String mTeamKey;
+
+    // Data
+    Team team;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,18 +50,6 @@ public class Dashboard extends AppCompatActivity {
         mTeamName = (TextView)findViewById(R.id.textView_dashTeamName);
         mTasks = (ListView)findViewById(R.id.listView_tasks);
         mTeamScoreBar = (ProgressBar)findViewById(R.id.progressBar_taskProgress);
-
-        Bundle extras = getIntent().getExtras();
-        if (extras!=null)
-        {
-            mTeamKey = extras.getString("liambowie.scavenger.teamkey");
-        }
-
-        // Set the team name in the top left corner of the dashboard
-        SharedPreferences preferences = getSharedPreferences("team", 0);
-        String teamName = preferences.getString("team_name", /*Should never appear*/ "Unassigned");
-        mTeamName.setText("Team:" + teamName);
-
 //        Created dummy tasks to be shown in the ListView mTasks
 //        Task task = new Task("Dippin' Skinny", "Go skinny dipping in the North Sea", 25);
 //        mTaskRef.push().setValue(task);
@@ -67,12 +63,12 @@ public class Dashboard extends AppCompatActivity {
 //        mTaskRef.push().setValue(task4);
 //        Task task5 = new Task("Beer Tower pt.2", "Drink the beer tower!", 35);
 //        mTaskRef.push().setValue(task5);
-
         mBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 SharedPreferences.Editor editor = getSharedPreferences("team", 0).edit();
                 editor.remove("team_name").commit();
+                editor.remove("team_key").commit();
                 startActivity(new Intent(getApplicationContext(), SignUp.class));
             }
         });
@@ -82,7 +78,45 @@ public class Dashboard extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        final Firebase mTeamRef = mRootRef.child("teams/" + mTeamKey);
+        SharedPreferences preferences = getSharedPreferences("team", 0);
+        String teamName = preferences.getString("team_name", /*Should never appear*/ "Unassigned");
+        String teamKey = preferences.getString("team_key", "null");
+
+        final Firebase mTeamRef = mRootRef.child("teams/" + teamKey);
+        final Firebase mScoreRef = mTeamRef.child("score");
+
+        team = new Team(teamName, teamKey);
+
+//        mTeamName.setText("Team: " + teamName + " / Score: " + team.getScore());
+
+        mTeamRef.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                mTeamName.setText("Team: " + team.getTeamName() + " / Score: " + team.getScore());
+            }
+
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+                int score = dataSnapshot.getValue(Integer.class);
+                team.setScore(score);
+                mTeamName.setText("Team: " + team.getTeamName() + " / Score: " + team.getScore());
+            }
+
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+
+            }
+        });
 
         FirebaseListAdapter<Task> adapter = new FirebaseListAdapter<Task>(this, Task.class, android.R.layout.simple_list_item_1, mTaskRef) {
             @Override
@@ -92,25 +126,17 @@ public class Dashboard extends AppCompatActivity {
         };
         mTasks.setAdapter(adapter);
 
-        // Setting the Progress Bar
-        int maxScore = 0;
-        for(int i = 0; i < mTasks.getCount(); i++){
-            Task current = (Task)mTasks.getItemAtPosition(i);
-            maxScore += current.getScore();
-        }
-        mTeamScoreBar.setMax(maxScore);
-
         mTasks.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Task task = (Task)mTasks.getItemAtPosition(position);
+                final Task task = (Task)mTasks.getItemAtPosition(position);
                 AlertDialog.Builder alert = new AlertDialog.Builder(Dashboard.this);
                 alert.setTitle(task.getName());
                 alert.setMessage(task.getDesc() + "\n\n worth: " + task.getScore() + "points");
                 alert.setPositiveButton(R.string.complete, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-
+                        mTeamRef.child("score").setValue(team.getScore() + task.getScore());
                     }
                 });
                 alert.setNegativeButton(R.string.incomplete, new DialogInterface.OnClickListener() {

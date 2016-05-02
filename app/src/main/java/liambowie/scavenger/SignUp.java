@@ -20,6 +20,9 @@ import android.widget.TextView;
 import com.firebase.client.Firebase;
 import com.firebase.ui.FirebaseListAdapter;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class SignUp extends AppCompatActivity {
 
     // Instance Variable for Sign Up Activity
@@ -101,18 +104,18 @@ public class SignUp extends AppCompatActivity {
             public void onClick(View v) {
                 if(!mTeamName.getText().toString().isEmpty()) {
                     String teamName = mTeamName.getText().toString();
-                    Team team = new Team(teamName, 0);
-                    mTeamRef.push();
-                    mTeamRef.setValue(team);
-                    String key = mTeamRef.getKey();
+                    Team team = new Team(teamName);
+                    Firebase teamPost = mTeamRef.push();
+                    teamPost.setValue(team);
+                    String key = teamPost.getKey();
+                    mTeamRef.child(key).child("key").setValue(key);
 
                     SharedPreferences.Editor preferenceEditor = getSharedPreferences("team", 0).edit();
                     preferenceEditor.putString("team_name", teamName).apply();
+                    preferenceEditor.putString("team_key", key).apply();
 
-                    Intent intent = new Intent(getApplicationContext(), Dashboard.class);
-                    intent.putExtra("liambowie.scavenger.teamkey", key);
                     finish();
-                    startActivity(intent);
+                    startActivity(new Intent(getApplication(), Dashboard.class));
                 }
                 else{
                     new AlertDialog.Builder(SignUp.this)
@@ -136,6 +139,7 @@ public class SignUp extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 final Team team = (Team)mTeamList.getItemAtPosition(position);
                 final String name = team.getTeamName();
+                final String key = team.getKey();
                 AlertDialog.Builder alert = new AlertDialog.Builder(SignUp.this);
                 alert.setTitle(R.string.alert_confirmteam_title);
                 alert.setMessage(R.string.alert_confirmteam_msg);
@@ -144,6 +148,7 @@ public class SignUp extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         SharedPreferences.Editor preferenceEditor = getSharedPreferences("team", 0).edit();
                         preferenceEditor.putString("team_name", name);
+                        preferenceEditor.putString("team_key", key);
                         preferenceEditor.commit();
 
                         finish();
