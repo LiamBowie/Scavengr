@@ -5,8 +5,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -20,10 +18,12 @@ import com.firebase.client.ChildEventListener;
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
-import com.firebase.client.ValueEventListener;
 import com.firebase.ui.FirebaseListAdapter;
 
-public class Dashboard extends AppCompatActivity {
+import liambowie.scavenger.objects.Task;
+import liambowie.scavenger.objects.Team;
+
+public class    Dashboard extends AppCompatActivity {
 
     // Instance Variables for the Dashboard Class
     final Firebase mRootRef = new Firebase("https://scavengr.firebaseio.com");

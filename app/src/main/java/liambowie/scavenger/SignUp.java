@@ -20,8 +20,7 @@ import android.widget.TextView;
 import com.firebase.client.Firebase;
 import com.firebase.ui.FirebaseListAdapter;
 
-import java.util.HashMap;
-import java.util.Map;
+import liambowie.scavenger.objects.Team;
 
 public class SignUp extends AppCompatActivity {
 

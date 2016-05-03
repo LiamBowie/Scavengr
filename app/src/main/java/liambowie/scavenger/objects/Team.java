@@ -1,4 +1,4 @@
-package liambowie.scavenger;
+package liambowie.scavenger.objects;
 
 /**
  * Created by Liam on 30/04/2016.
